@@ -13,23 +13,12 @@ namespace ex13
             Console.Write("Введите имя: ");
             string name = Console.ReadLine();
             Console.Write("Введите символ: ");
-            char symbol = Convert.ToChar(Console.ReadLine());
+            char symbol = Console.ReadKey(true).KeyChar;
+            Console.WriteLine(symbol);
 
-            Console.WriteLine(new string(symbol, name.Length + 2));
+            Console.WriteLine(new string(symbol, name.Length));
             Console.Write($"{symbol}{name}{symbol}\n");
             Console.WriteLine(new string(symbol, name.Length + 2));
-
-            for (int i = 0; i < (name.Length + 2); i++)
-            {
-                Console.Write(symbol);
-            }
-
-            Console.Write($"\n{symbol}{name}{symbol}\n");
-
-            for (int i = 0; i < (name.Length + 2); i++)
-            {
-                Console.Write(symbol);
-            }
         }
     }
 }
