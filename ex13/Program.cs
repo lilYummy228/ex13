@@ -10,16 +10,17 @@ namespace ex13
     {
         static void Main(string[] args)
         {
-            int border = 2;
             Console.Write("Введите имя: ");
             string name = Console.ReadLine();
             Console.Write("Введите символ: ");
             char symbol = Console.ReadKey(true).KeyChar;
             Console.WriteLine(symbol);
+            string middleLine = $"{symbol}{name}{symbol}";
+            string frame = new string(symbol, middleLine.Length);
 
-            Console.WriteLine(new string(symbol, name.Length + border));
-            Console.Write($"{symbol}{name}{symbol}\n");
-            Console.WriteLine(new string(symbol, name.Length + border));
+            Console.WriteLine($"\n{frame}");
+            Console.Write(middleLine);
+            Console.WriteLine($"\n{frame}");
         }
     }
 }
